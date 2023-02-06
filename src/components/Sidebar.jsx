@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { RxDashboard, RxPerson, RxSketchLogo } from "react-icons/rx";
-import { HiOutlineShoppingBag } from "react-icons/Hi";
-import { FiSettings } from "react-icons/Fi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { FiSettings } from "react-icons/fi";
 
 const Sidebar = ({ children }) => {
   return (
