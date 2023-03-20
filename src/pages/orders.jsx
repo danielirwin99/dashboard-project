@@ -5,11 +5,11 @@ import { data } from "@/data/data";
 import OrdersSkeleton from "@/UI/OrdersSkeleton";
 
 const orders = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
   }, []);
   return (
@@ -28,7 +28,9 @@ const orders = () => {
           </div>
           <ul>
             {loading
-              ? new Array(8).fill(0).map((_, index) => <OrdersSkeleton />)
+              ? new Array(8)
+                  .fill(0)
+                  .map((_, index) => <OrdersSkeleton key={index} />)
               : data.map((order, id) => (
                   <li
                     key={id}

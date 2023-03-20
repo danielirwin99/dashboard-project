@@ -4,11 +4,11 @@ import { FaShoppingBag } from "react-icons/fa";
 import { Skeleton } from "@mui/material";
 
 const RecentOrders = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
   }, []);
 
@@ -19,7 +19,10 @@ const RecentOrders = () => {
         {loading
           ? new Array(8).fill(0).map((_, index) => (
               <>
-                <li className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer">
+                <li
+                  key={index}
+                  className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"
+                >
                   <div className="bg-purple-100 rounded-lg p-3">
                     <FaShoppingBag className="text-purple-800" />
                   </div>

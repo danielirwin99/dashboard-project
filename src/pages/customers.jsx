@@ -4,11 +4,11 @@ import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 import CustomersSkeleton from "@/UI/CustomersSkeleton";
 
 const customers = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
   }, []);
   return (
@@ -27,7 +27,9 @@ const customers = () => {
           </div>
           <ul>
             {loading
-              ? new Array(8).fill(0).map((_, index) => <CustomersSkeleton />)
+              ? new Array(8)
+                  .fill(0)
+                  .map((_, index) => <CustomersSkeleton key={index} />)
               : data.map((order, id) => (
                   <li className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
                     <div className="flex items-center">
