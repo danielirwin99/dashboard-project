@@ -5,11 +5,11 @@ import { data } from "@/data/data";
 import OrdersSkeleton from "@/UI/OrdersSkeleton";
 
 const orders = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
   }, []);
   return (

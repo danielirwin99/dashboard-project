@@ -4,13 +4,13 @@ import { FaShoppingBag } from "react-icons/fa";
 import { Skeleton } from "@mui/material";
 
 const RecentOrders = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 1000);
-  }, []);
+  });
 
   return (
     <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
