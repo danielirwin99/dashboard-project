@@ -4,11 +4,11 @@ import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 import CustomersSkeleton from "@/UI/CustomersSkeleton";
 
 const customers = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 1000);
   }, []);
   return (

@@ -4,11 +4,11 @@ import { FaShoppingBag } from "react-icons/fa";
 import { Skeleton } from "@mui/material";
 
 const RecentOrders = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 1000);
   }, []);
 
